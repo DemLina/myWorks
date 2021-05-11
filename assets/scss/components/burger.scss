@@ -1,0 +1,16 @@
+.burger {
+    cursor: pointer;
+    // .burger__line
+
+    &__line {
+        display: block;
+        margin-bottom: 0.8rem;
+        width: 3rem;
+        height: .3rem;
+        background-color: $primary;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.privacy-section {
+    margin: 4rem 0;
+    @media (min-width: $tabletSmallP1){
+        margin: 6rem 0;
+    }
+    // .privacy-section__container
+
+    &__container {
+        max-width: 75rem;
+    }
+}
+

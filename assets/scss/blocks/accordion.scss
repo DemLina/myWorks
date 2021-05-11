@@ -1,0 +1,112 @@
+.accordion-section {
+    margin: 6rem 0 4rem;
+    @media (min-width: $tabletSmallP1){
+        margin: 6rem 0; 
+    }
+    // .accordion-section__button
+
+    &__button {
+        box-sizing: border-box;
+        transition: linear 0.2s;
+        position: relative;
+        &:before{
+            position: absolute;
+            content: '';
+            width: 1.2rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 2px;
+            background: $black;
+            border-radius: 1px;
+            transition: linear 0.2s;
+        }
+        &:after{
+            position: absolute;
+            content: '';
+            height: 1.2rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 2px;
+            background: $black;
+            border-radius: 1px;
+        }
+
+
+    }
+
+    // .accordion-section__container
+
+    &__container {
+        h2{
+            margin-bottom: 3rem;
+            @extend  .h3;
+            color: $black;
+            text-align: center;
+        }
+    }
+
+    // .accordion-section__item
+
+    &__item{
+        margin-top: 1.5rem;
+    }
+
+
+    // .accordion-section__open
+
+    &__open {
+        background-color: #142ec033;
+        border-radius: 2px;
+        padding: 2rem; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        p{
+            font-size: 1.6rem;
+            font-weight: 700;
+            width: 80%;
+            @media (min-width: $tabletSmallP1){
+                font-size: 1.8rem;
+            }
+        }
+        @media (min-width: $tabletSmallP1){
+            padding: 2rem 3rem 2rem 4rem; 
+        }
+
+         // .accordion-section__open--active
+
+        &--active{
+            .accordion-section__button{
+                    transform: rotate(90deg);
+                    transition: linear 0.2s;
+                    background: #EFF8EC;
+                    &:before{
+                        width: 0;
+                        height: 0;
+                        transition: linear 0.2s;
+                    }
+            }
+        }
+    }
+
+    // .accordion-section__content
+
+    &__content {        
+        height: 100%;
+        overflow: hidden;
+        
+
+        display: none;
+        padding: 2.4rem;
+        @media (min-width: $tabletSmallP1){
+            padding: 4.5rem 4rem 3rem;
+        }
+        p + p {
+            margin-top: 2rem;
+        }
+    }
+
+}

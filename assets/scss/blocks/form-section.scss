@@ -1,0 +1,120 @@
+.form-section {
+    position: relative;
+    padding: 5rem 0;
+    background-color: rgb(240, 255, 252);
+    @media (min-width: $tabletSmallP1){
+       padding:  9rem 0;
+    }
+
+
+    // .form-section__flowers
+
+    &__flowers {
+        position: absolute;
+        left: 2.5rem;
+        top: -2rem;
+        @media (max-width: $tabletSmall){
+            display: none;
+        }
+        img{
+            max-width: 20rem;
+            @media (max-width: $tablet){
+                width: 50%;
+            }
+        }
+
+    }
+
+    // .form-section__flower
+
+    &__flower {
+        position: absolute;
+        right: 6rem;
+        @media (max-width: $tablet){
+            bottom: 2rem;
+        }
+        @media (min-width: $tabletP1){
+            top: 36%;
+        }
+        @media (max-width: $tabletSmall){
+            display: none;
+        }
+        img{
+            max-width: 40rem;
+            width: 100%;
+            @media (max-width: $tablet){
+                width: 50%;
+                margin-left: auto;
+            }
+        }
+    }
+
+    // .form-section__circle
+
+    &__circle {
+        position: absolute;
+        left: 7rem;
+        bottom: 0rem;
+        @media (max-width: $tablet){
+            display: none;
+        }
+        img{
+            max-width: 30rem;
+            width: 100%;
+            @media (max-width: $tablet){
+                width: 50%;
+                margin-left: auto;
+            }
+        }
+    }
+
+    // .form-section__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .form-section__title
+
+    &__title {
+        margin-bottom: 6rem;
+        @media (min-width: $tabletSmallP1){
+            margin-bottom: 3.6rem;
+        }
+    }
+
+    // .form-section__form
+
+    &__form {
+        max-width: 53.5rem;
+        width: 100%;
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            span{
+                @extend .p1;
+                text-align: right;
+                width: 100%;
+            }
+            .field{
+                margin-bottom: 3rem;
+                @media (min-width: $tabletSmallP1){
+                    margin-bottom: 4rem;
+                }
+            }
+            button{
+                max-width: 240px;
+                width: 100%;
+                margin-top: 6.5rem;
+                @media (max-width: $tabletSmall){
+                    max-width: 53.5rem;
+                    margin-top: 4.5rem;
+                }
+            }
+        }
+    }
+}

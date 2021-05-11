@@ -1,0 +1,29 @@
+@import '_functions';
+@import '_variables';
+@import '_mixins';
+@import '_reset';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import '_fonts';
+@import '_typography';
+@import '_layout';
+
+
+@import 'components/base/btn';
+@import 'components/base/field';
+@import 'components/burger';
+
+
+
+@import 'blocks/header.scss';
+@import 'blocks/hero-section/hero-section.scss';
+@import 'blocks/hero-section/hero-slider.scss';
+@import 'blocks/footer-section.scss';
+@import 'blocks/accordion.scss';
+@import 'blocks/portfolio-items/portfoilio-item.scss';
+@import 'blocks/portfolio-items/portfolio-items.scss';
+@import 'blocks/table-section.scss';
+@import 'blocks/img-with-description-slider.scss';
+@import 'blocks/grid-three-item.scss';
+@import 'blocks/text-and-img-to-bord/text-and-img-to-bord.scss';
+@import 'blocks/form-section.scss';
+@import 'blocks/privacy-section.scss';

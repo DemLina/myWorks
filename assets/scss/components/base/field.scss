@@ -1,0 +1,51 @@
+.field {
+    display: flex;
+    position: relative;
+    width: 100%;
+    input,
+    textarea {
+
+        outline: none;
+
+        width: 100%;
+        padding: 10px 12px;
+        padding-left: 6rem;
+        //border: 1px solid $fieldOutline ;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        font-size: 1.6rem;
+        line-height: 1.56;
+        //color: $textDark1;
+
+        
+        border: solid 1px rgba(146, 146, 146, 0.5);
+      }
+
+        &::placeholder {
+            color: $black;
+        }
+
+        img{
+            position: absolute;
+            left: 2rem;
+            top: 1.3rem;
+        }
+    }
+
+    input {
+        height: 50px;
+        border-radius: 25px;
+    }
+
+    textarea {
+        resize: none;
+        overflow-y: auto;
+        height: 174px;
+        border-radius: 15px;
+    }
+
+

@@ -1,0 +1,87 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+
+    border-radius: 100px;
+    border: 1px solid transparent;
+    padding: 1rem 2.4rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    height: 5rem;
+    // .btn--icon
+    &--icon {
+        img, svg {
+            margin-left: 1rem;
+        }
+    }
+
+    // .btn--blue
+    &--blue {
+        background-color: $primary;
+        color: $white;
+    }
+
+    // .btn--border-blue
+    &--border-blue {
+        background-color: $white;
+        color: $primary;
+        border: solid 1.5px $primary;
+        transition: linear .3s;
+        svg{
+            circle, path{
+                transition: linear .3s;
+            }
+        }
+        @media (min-width: $tabletP1){
+                &:hover{
+                    background-color: $primary;
+                    color: $white;
+                    svg{
+                        circle{
+                                fill: $white;
+                            }
+                        path{
+                                stroke: $white;
+                        }
+            
+                    }
+                }
+        }
+    }
+
+        // .btn--border-blue-color-black
+
+        &--border-blue-color-black {
+            background-color: $white;
+            color: $black;
+            border: solid 1.5px $primary;
+            transition: linear .3s;
+            @media (min-width: $tabletP1){
+                    &:hover{
+                        background-color: $primary;
+                        color: $white;
+                    }
+            }
+        }
+
+    // .btn--white
+    &--white {
+        background-color: $white;
+        color: $black;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    // .btn--small
+
+    &--small {
+        height: 3.6rem;
+    }
+}
+
+
+
+

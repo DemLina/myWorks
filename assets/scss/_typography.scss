@@ -1,0 +1,198 @@
+html {
+    font-size: 62.5%;
+    font-family: $primary-font;
+    color: $black;
+}
+
+h1, .h1 {
+    @include adaptiveProperty('font-size', 56, 36);
+    @include adaptiveProperty('line-height', 72, 48);
+    font-weight: bold;
+}
+
+h2, .h2 {
+    @include adaptiveProperty('font-size', 48, 32);
+    @include adaptiveProperty('line-height', 60, 40);
+    font-weight: bold;
+}
+
+h3, .h3 {
+    @include adaptiveProperty('font-size', 40, 20);
+    @include adaptiveProperty('line-height', 42, 32);
+    font-weight: bold;
+}
+
+h4, .h4 {
+    @include adaptiveProperty('font-size', 30, 18);
+    @include adaptiveProperty('line-height', 48, 28);
+    font-weight: 500;
+}
+
+h5, .h5 {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    font-weight: bold;
+}
+
+h6, .h6 {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+p, .p1, a {
+    font-size: 1.6rem;
+    line-height:  2.4rem;
+}
+
+.p2 {
+    @include adaptiveProperty('font-size', 24, 20);
+    @include adaptiveProperty('line-height', 40, 32);
+}
+
+.lead1{
+    @include adaptiveProperty('font-size', 40, 36);
+    @include adaptiveProperty('line-height', 42, 48);
+}
+
+em{
+    font-style: italic;
+}
+
+.heading-with-logo{
+    color: $primary;
+    position: relative;
+    text-align: center;
+    @media (min-width: $mobileP1){
+        padding-left: 6rem;
+        padding-top: 0rem;
+    }
+    &::before{
+        
+        content: url('./assets/img/fill-h2.svg');
+        height: 100%;
+        @media (max-width: $mobileP1){
+            display: block;
+        }
+        @media (min-width: $mobileP1){
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+    
+}
+
+.common-text{
+    h1{
+        max-width: 50rem;
+        font-size: 4.6rem;
+        position: relative;
+        margin-bottom: 3.2rem;
+        padding-bottom: 2rem;
+        @media (min-width: $tabletP1){
+            margin-bottom: 5.5rem; 
+        }
+        &:before{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            width: 25rem;
+            height: 1rem;
+            background-color: $primary;
+            border-radius: 5px;
+        }
+    }
+    h2 {
+        text-align: left;
+        padding-left: 0;
+        @extend .h4;
+        font-weight: bold;
+        margin: 6rem 0 2rem;
+        @media (min-width: $tabletP1){
+            margin: 6rem 0 2rem;
+        }
+    }
+
+    h4, h5, h6 {
+        margin: 2.3rem 0 1.5rem;
+        @media (min-width: $tabletP1){
+            margin: 3rem 0 1.5rem;
+        }
+    }
+    p{  
+        margin: 1.8rem 0;
+        a{
+            text-decoration: underline;
+            @extend .p1;
+            color: $black;
+        }
+    }
+    ul{
+        list-style: disc;
+    }
+    ol{
+        list-style: decimal;
+    }
+    ul, ol{
+        list-style-position: outside;
+        padding-left: 2rem;
+        margin: 1.8rem 0;
+        li{
+            margin-top: 1rem;
+            @extend .p1;
+        }
+    }
+    span{
+        @extend .p1;
+        display: flex;
+        margin: 1.5rem 0;
+        div{
+            margin-left: 4rem;
+            @extend .p1;
+        }
+    }
+    strong , b{
+        font-weight: bold;
+    }
+
+    em,i{
+        font-style: italic;
+    }
+
+
+    table{
+        margin: 3rem 0;
+        @extend .p1;
+        @media (max-width: $mobile){
+            font-size: 1.3rem;
+        }
+        tr{
+            border-top: 1px solid #ddd;
+            transition: linear .2s;
+            &:not(:first-child){
+                &:hover{
+                    background-color: rgba(128, 128, 128, 0.068);
+                    transition: linear .2s;
+                }
+            }
+            &:first-child{
+                background-color: $primary;
+                color: $white;
+                font-weight: bold;
+                border-top: none;
+                td{
+                    &:first-child{
+                        border-right: .1rem solid #d9edf7;
+                    }
+                }
+            }
+            td{
+                padding: .8rem;
+                box-sizing: border-box;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,41 @@
+
+.hero-slider {
+    // .hero-slider__item
+
+    &__item {
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+
+    .slick-dots{
+        margin-top: -1.9rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        @media (min-width: $tabletP1){
+            margin-top: -3rem;
+        }
+        li{
+            margin: 0 1.5rem;
+            button{
+                border-radius: 50%;
+                width: 1.2rem;
+                height: 1.2rem;
+                background-color: $white;
+                color: $white;
+                font-size: 0px;
+            } 
+        }
+        .slick-active{
+            button{
+                color: $primary;
+                background: $primary;
+                opacity: 1;
+                font-size: 0px;
+            }
+        }
+
+    }
+}
